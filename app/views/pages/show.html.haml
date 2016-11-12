@@ -28,3 +28,11 @@
 - unless @page.keywords.blank?
   - content_for :keywords do
     = @page.keywords
+    
+
+-if params[:page_slug] && params[:page_slug] == "100-compostable-pods"
+  = render "floodlight_tags/learn"
+-elsif params[:page_slug] && params[:page_slug] == "the-muskoka-roastery-difference"
+  = render "floodlight_tags/compostable"
+-elsif params[:page_slug] && params[:page_slug] == "roastery-showroom"
+  = render "floodlight_tags/meet" 

@@ -57,6 +57,8 @@
                   |
                 = link_to "Website", place.website
 
+= render "floodlight_tags/where_to_buy"
+
 - content_for :sidebar do
   - unless @featured_product.blank?
     %h3 Featured
