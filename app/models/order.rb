@@ -59,6 +59,7 @@ class Order < ActiveRecord::Base
   def calculated_shipping_fees_by_weight
     number_of_shipping_charges = 1 # default multiplier for shipping charges
     shipping_rate_multiple = DynamicSetting.find_by_name("shipping_rate_multiple").value.to_f # in pounds
+    shipping_rate_multiple = shipping_rate_multiple + 1 
 
     if calculated_country_code == "INT" # international shipments are subject to multiple charges by weight
       shipping_weight_threshold = shipping_rate_multiple * GRAMS_PER_POUND
@@ -71,6 +72,7 @@ class Order < ActiveRecord::Base
   def calculated_shipping_fees_by_units
     number_of_shipping_charges = 1
     shipping_rate_multiple = DynamicSetting.find_by_name("shipping_rate_multiple").value.to_f # in units
+    shipping_rate_multiple = shipping_rate_multiple + 1 
 
     if calculated_country_code == "INT" # international shipments are subject to multiple charges by units
       number_of_shipping_charges = (total_units / shipping_rate_multiple).floor + 1
