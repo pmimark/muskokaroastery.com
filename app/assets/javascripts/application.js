@@ -16,6 +16,10 @@
 //= require lib/jquery-ui-1.8.11/jquery.effects.core
 //= require lib/jquery-ui-1.8.11/jquery.effects.highlight
 //= require menu
+//= require carousal/jquery-1.11.1.min
+//= require carousal/owl.carousel
+//= require carousal/jquery-asAccordion
+//= require carousal/jquery.mCustomScrollbar.concat.min
 //= require_self
 
 jQuery(document).ready(function() {

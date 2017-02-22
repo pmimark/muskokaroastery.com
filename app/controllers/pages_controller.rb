@@ -28,6 +28,9 @@ class PagesController < ApplicationController
     @blog_posts = BlogPost.order("created_at desc").where(:is_draft => false).limit(3)
   end
 
+  def connect
+  end
+
   def products
   end
 

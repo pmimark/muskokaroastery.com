@@ -14,5 +14,9 @@
  *= require fonts
  *= require ion-icons
  *= require main
+ *= require carousal/asAccordion
+ *= require carousal/font-awesome.min
+ *= require carousal/custom_style
+ *= require carousal/jquery.mCustomScrollbar
  *= require_self
  */
