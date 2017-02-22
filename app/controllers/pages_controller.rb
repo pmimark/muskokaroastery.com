@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :require_admin, :except => [:show, :homepage, :products, :contact]
+  before_filter :require_admin, :except => [:show, :homepage, :products, :contact, :connect]
   before_filter :set_cache_buster, :only => [:homepage]
   #uses_tiny_mce :only => [:new, :create, :edit, :update]
 
