@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  before_filter :require_admin, :except => [:show, :homepage, :products, :contact, :connect]
-  before_filter :set_cache_buster, :only => [:homepage]
+  before_filter :require_admin, :except => [:show, :homepage, :homepage1, :products, :contact, :connect]
+  before_filter :set_cache_buster, :only => [:homepage, :homepage1]
   #uses_tiny_mce :only => [:new, :create, :edit, :update]
 
   def index
@@ -24,6 +24,11 @@ class PagesController < ApplicationController
   end
 
   def homepage
+    @homepage_title = DynamicSetting.find_by_name("homepage_title").value
+    @blog_posts = BlogPost.order("created_at desc").where(:is_draft => false).limit(3)
+  end
+
+  def homepage1
     @homepage_title = DynamicSetting.find_by_name("homepage_title").value
     @blog_posts = BlogPost.order("created_at desc").where(:is_draft => false).limit(3)
   end

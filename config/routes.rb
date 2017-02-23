@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get "pages/:id/sort/:new_position"                  => "pages#sort",            :as => :page_sort
   get "products/:id/sort/:new_position"               => "products#sort",         :as => :product_sort
   get "connect"                                       => "pages#connect"
+  get "homepage1"                                     => "pages#homepage1"
 
   # AJAX URL for newsletter signups.
   post "feedbacks/newsletter_signup" => "feedbacks#newsletter_signup", :as => :newsletter_signup
