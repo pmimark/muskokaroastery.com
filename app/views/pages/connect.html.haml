@@ -91,15 +91,15 @@
     });
   })(jQuery);
 :javascript
-          jQuery(document).ready(function(){
-              jQuery(".-accordion__panel>span").each(function(){
-                  jQuery(this).click(function(event){
-                      if(jQuery(this).parent().hasClass("-accordion--active")) {
-                          console.log("right event");
-                          event.preventDefault();
-                          event.stopImmediatePropagation();
-                      } 
-                  });
-              });
-          });
+  jQuery(document).ready(function(){
+    jQuery(".-accordion__panel>span").each(function(){
+      jQuery(this).click(function(event){
+        if(jQuery(this).parent().hasClass("-accordion--active")) {
+          console.log("right event");
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        } 
+      });
+    });
+  });
      
