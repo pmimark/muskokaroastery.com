@@ -59,6 +59,18 @@
 / script for fb page ends
 / owl carousel
 :javascript
+  jQuery(document).ready(function(){
+    jQuery(".-accordion__panel>span").each(function(){
+      jQuery(this).click(function(event){
+        if(jQuery(this).parent().hasClass("-accordion--active")) {
+          console.log("right event");
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        } 
+      });
+    });
+  });
+:javascript
   jQuery(document).ready(function () {
     var owl = jQuery("#owl-demo");
     owl.owlCarousel({
@@ -82,18 +94,6 @@
 / custom scrollbar plugin
 - content_for :javascript_includes do
   = javascript_include_tag "jquery.mCustomScrollbar.concat.min.js"
-:javascript
-  jQuery(document).ready(function(){
-    jQuery(".-accordion__panel>span").each(function(){
-      jQuery(this).click(function(event){
-        if(jQuery(this).parent().hasClass("-accordion--active")) {
-          console.log("right event");
-          event.preventDefault();
-          event.stopImmediatePropagation();
-        } 
-      });
-    });
-  });
 :javascript
   (function ($) {
     $(window).on("load", function () {

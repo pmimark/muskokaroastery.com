@@ -20,3 +20,7 @@
  *= require carousal/jquery.mCustomScrollbar
  *= require_self
  */
+
+.facebook_sec{
+  padding-left: 13% !important;
+}
