@@ -12,6 +12,6 @@ div.add-page-link a:visited, div.add-page-link a:focus, div.add-page-link a:acti
   font-weight: bold;
 }
 
-.facebook_sec{
-  padding-left: 13% !important;
+div.facebook_sec{
+  padding-left: 13%;
 }

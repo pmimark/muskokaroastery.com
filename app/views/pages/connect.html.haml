@@ -83,14 +83,6 @@
 - content_for :javascript_includes do
   = javascript_include_tag "jquery.mCustomScrollbar.concat.min.js"
 :javascript
-  (function ($) {
-    $(window).on("load", function () {
-      $(".-accordion__expander").mCustomScrollbar({
-        theme: "minimal-dark"
-      });
-    });
-  })(jQuery);
-:javascript
   jQuery(document).ready(function(){
     jQuery(".-accordion__panel>span").each(function(){
       jQuery(this).click(function(event){
@@ -102,4 +94,11 @@
       });
     });
   });
-     
+:javascript
+  (function ($) {
+    $(window).on("load", function () {
+      $(".-accordion__expander").mCustomScrollbar({
+        theme: "minimal-dark"
+      });
+    });
+  })(jQuery);
