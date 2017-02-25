@@ -1,6 +1,6 @@
 %section.connect_section
   .connect_cafe_container
-    %h2 Connect
+    %h2 Stay Connected
     .connect_social
       %ul
         %li
@@ -90,3 +90,16 @@
       });
     });
   })(jQuery);
+:javascript
+        jQuery(document).ready(function(){
+            jQuery(".-accordion__panel>span").each(function(){
+                jQuery(this).click(function(event){
+                    if(jQuery(this).parent().hasClass("-accordion--active")) {
+                        console.log("right event");
+                        event.preventDefault();
+                        event.stopImmediatePropagation();
+                    } 
+                });
+            });
+        });
+     
