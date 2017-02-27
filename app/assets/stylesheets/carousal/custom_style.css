@@ -238,6 +238,7 @@ body {
 }
 
 .connect_cafe_innr {
+    margin-bottom: -100px;
     border: 1px solid #dfc29a;
     margin-top: -29px;
     background: #f7f0e6;
