@@ -6,7 +6,7 @@
   %hr
   %p= link_to "Edit Title", edit_homepage_title_pages_path
 
-.clearfix.product-list-top
+-#.clearfix.product-list-top
   .feature-left
     - feature = Feature.homepage_left
     = link_to image_tag(feature.photo.url(:featured), :border => 0, class: 'feature-image'), feature.link_url

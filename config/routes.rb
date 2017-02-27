@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   put "pages/update_homepage_title"                   => "pages#update_homepage_title"
   get "pages/:id/sort/:new_position"                  => "pages#sort",            :as => :page_sort
   get "products/:id/sort/:new_position"               => "products#sort",         :as => :product_sort
-  get "connect"                                       => "pages#connect"
+  get "stay-connected"                                => "pages#connect"
   get "homepage1"                                     => "pages#homepage1"
 
   # AJAX URL for newsletter signups.
