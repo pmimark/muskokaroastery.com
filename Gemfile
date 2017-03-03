@@ -23,7 +23,7 @@ gem 'tinymce-rails', '~> 4.3.3'
 gem 'therubyracer', '~> 0.12.2'
 
 # APIs
-#gem 'hominid'
+gem 'hominid'
 gem 'mailchimp', '~> 0.0.9'
 
 # Utilities
