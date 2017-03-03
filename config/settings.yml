@@ -27,6 +27,7 @@ mailing_list_description: If you would like to receive our quarterly e-newslette
 #mailchimp_list_name: Muskoka Roastery TEST
 
 # Muskoka Roastery Production Account
-mailchimp_api_key: ae4babd937682eaf2209bf57f8d367c2-us2
+#mailchimp_api_key: ae4babd937682eaf2209bf57f8d367c2-us2
+mailchimp_api_key: 60d0a131fd0859d7b4b8647b15ef1fab-us2
 mailchimp_list_id: 5dcd7b239b
-mailchimp_list_name: MRCC Newsletter
+mailchimp_list_name: Muskoka Roastery Coffee Newsletter

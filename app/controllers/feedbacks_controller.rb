@@ -24,9 +24,9 @@ class FeedbacksController < ApplicationController
   def newsletter_signup
     api = Mailchimp::API.new(Settings.mailchimp_api_key)
     if params[:email_address] && api.listSubscribe(id: Settings.mailchimp_list_id, email_address: params[:email_address])
-      # h = Hominid::API.new(Settings.mailchimp_api_key)
-      # list_id = h.find_list_id_by_name(Settings.mailchimp_list_name)
-      # h.list_subscribe(list_id, params[:email_address], {}, 'html', false, true, true, false)
+      h = Hominid::API.new(Settings.mailchimp_api_key)
+      list_id = h.find_list_id_by_name(Settings.mailchimp_list_name)
+      h.list_subscribe(list_id, params[:email_address], {}, 'html', false, true, true, false)
 
       render :nothing => true, :status => :ok, :layout => false
     else
