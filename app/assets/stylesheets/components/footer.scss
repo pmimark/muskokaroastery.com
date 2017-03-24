@@ -102,3 +102,35 @@ footer a:link, footer a:visited {
 footer a:hover, footer a:focus, footer a:active {
   color: $dark-footer-brown;
 }
+
+#social .connect_social {
+  float: right;
+  margin-top: 0;
+}
+
+#social .connect_social ul {
+  margin-left: 10px;
+}
+
+#social .connect_social ul li {
+  width: 35px;
+  height: 35px;
+  margin-right: 7px;
+  line-height: 36px;
+  font-size: 18px;
+}
+
+#social .connect_social ul li:last-child {
+  margin-right: 0;
+}
+
+#social .connect_social ul li a {
+  text-indent: 0;
+  color: #7a3623 !important;
+  border-radius: 0;
+  margin: 0;
+}
+
+#social .connect_social ul li:hover a {
+  color: #fff !important;
+}
