@@ -72,13 +72,27 @@
           #more
             #copyright
               %nav= render :partial => "layouts/footer_nav"
-              &copy; 2016 Muskoka Roastery Coffee Co.
+              ="&copy; #{Time.now.year} Muskoka Roastery Coffee Co.".html_safe
 
             #social
-              = link_to 'Rainforest Alliance', 'http://www.rainforest-alliance.org', :target => '_blank', :class => 'rainforest-alliance', :title => 'Certified Rainforest Alliance'
-              = link_to 'Twitter', 'https://twitter.com/MuskokaRoastery', :target => '_blank', :class => 'twitter', :title => 'Follow us on Twitter'
-              = link_to 'Facebook', 'https://www.facebook.com/MuskokaRoastery', :target => '_blank', :class => 'facebook', :title => 'Friend us on Facebook'
-              = link_to 'Instagram', 'https://www.instagram.com/muskokaroastery', :target => '_blank', :class => 'instagram', :title => 'Follow us on Instagram'
+              %a.rainforest-alliance{:href => "http://www.rainforest-alliance.org", :target => "_blank", :title => "Certified Rainforest Alliance"} Rainforest Alliance
+              .connect_social
+                %ul
+                  %li
+                    %a{:href => "https://www.facebook.com/MuskokaRoastery", :target => "_blank", :title => ""}
+                      %i.fa.fa-facebook{"aria-hidden" => "true"}
+                  %li
+                    %a{:href => "https://twitter.com/MuskokaRoastery", :target => "_blank", :title => ""}
+                      %i.fa.fa-twitter{"aria-hidden" => "true"}
+                  %li
+                    %a{:href => "https://www.instagram.com/muskokaroastery", :target => "_blank", :title => ""}
+                      %i.fa.fa-instagram{"aria-hidden" => "true"}
+
+            -##social
+            -#  = link_to 'Rainforest Alliance', 'http://www.rainforest-alliance.org', :target => '_blank', :class => 'rainforest-alliance', :title => 'Certified Rainforest Alliance'
+            -#  = link_to 'Twitter', 'https://twitter.com/MuskokaRoastery', :target => '_blank', :class => 'twitter', :title => 'Follow us on Twitter'
+            -#  = link_to 'Facebook', 'https://www.facebook.com/MuskokaRoastery', :target => '_blank', :class => 'facebook', :title => 'Friend us on Facebook'
+            -#  = link_to 'Instagram', 'https://www.instagram.com/muskokaroastery', :target => '_blank', :class => 'instagram', :title => 'Follow us on Instagram'
 
         %button#menu-collapser{ title: 'Close Menu' }
 
